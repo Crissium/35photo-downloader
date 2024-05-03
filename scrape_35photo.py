@@ -46,7 +46,8 @@ class Downloader(Thread):
 			if os.path.isfile(filename):
 				if not self._quiet:
 					print_stderr(f'{filename} already exists, skipping')
-				return
+				self._photos.task_done()
+				continue
 			# while os.path.isfile(filename):
 			# 	print_stderr(f'File {filename} already exists, saving as ', end='')
 			# 	filename, ext = os.path.splitext(filename)
