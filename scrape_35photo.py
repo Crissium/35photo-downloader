@@ -159,5 +159,5 @@ if __name__ == '__main__':
 		print_stderr(f'Usage: {sys.argv[0]} <username> [-q|--quiet]')
 		sys.exit(1)
 	
-	quite = (len(sys.argv) == 3 and (sys.argv[2] == '-q' or sys.argv[2] == '--quiet'))
-	main(sys.argv[1], quite)
+	quiet = (len(sys.argv) == 3 and (sys.argv[2] == '-q' or sys.argv[2] == '--quiet'))
+	main(sys.argv[1], quiet)
